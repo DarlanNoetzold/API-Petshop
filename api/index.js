@@ -12,6 +12,7 @@ const SerializadorErro = require('./Serializador').SerializadorErro
 //Boa parte do parser
 app.use(bodyParser.json())
 
+//Configurando o Formato da requisição
 app.use((requisicao, resposta, proximo) => {
     let formatoRequisitado = requisicao.header('Accept')
 
@@ -29,9 +30,11 @@ app.use((requisicao, resposta, proximo) => {
     proximo()
 })
 
+//Api propriamente dita
 const roteador = require('./rotas/fornecedores')
 app.use('/api/fornecedores', roteador)
 
+//Tratamento dos erros
 app.use((erro, requisicao, resposta, proximo) => {
     let status = 500
 
