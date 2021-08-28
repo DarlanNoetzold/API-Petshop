@@ -9,6 +9,7 @@ const ValorNaoSuportado = require('./erros/ValorNaoSuportado')
 const formatosAceitos = require('./Serializador').formatosAceitos
 const SerializadorErro = require('./Serializador').SerializadorErro
 
+//Boa parte do parser
 app.use(bodyParser.json())
 
 app.use((requisicao, resposta, proximo) => {
