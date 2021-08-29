@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize')
 const instancia = require('../../banco-de-dados')
 
-
 //Criação das tableas do Banco
 const colunas = {
     empresa: {
