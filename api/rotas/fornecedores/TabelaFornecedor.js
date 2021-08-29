@@ -1,6 +1,7 @@
 const Modelo = require('./ModeloTabelaFornecedor')
 const NaoEncontrado = require('../../erros/NaoEncontrado')
 
+//CRUD do Banco
 module.exports = {
     listar () {
         return Modelo.findAll({ raw: true })
