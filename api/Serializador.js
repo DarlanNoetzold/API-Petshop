@@ -1,6 +1,7 @@
 const ValorNaoSuportado = require('./erros/ValorNaoSuportado')
 const jsontoxml = require('jsontoxml')
 
+// Tratamento dos dados de entrada
 class Serializador {
     json (dados) {
         return JSON.stringify(dados)
@@ -21,6 +22,7 @@ class Serializador {
         return jsontoxml({ [tag]: dados })
     }
 
+    //Verifica o tipo de dado e devolve de acordo
     serializar (dados) {
         dados = this.filtrar(dados)
 
@@ -35,6 +37,8 @@ class Serializador {
         throw new ValorNaoSuportado(this.contentType)
     }
 
+
+    // Filtros para ver se um campo tem dado
     filtrarObjeto (dados) {
         const novoObjeto = {}
 
@@ -60,6 +64,8 @@ class Serializador {
     }
 }
 
+
+//Serializa os dados de Fornecedor, verificando se tudo esta de acordo
 class SerializadorFornecedor extends Serializador {
     constructor (contentType, camposExtras) {
         super()
@@ -74,6 +80,8 @@ class SerializadorFornecedor extends Serializador {
     }
 }
 
+
+//Serializa os dados de erros, verificando se tudo esta de acordo
 class SerializadorErro extends Serializador {
     constructor (contentType, camposExtras) {
         super()
