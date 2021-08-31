@@ -1,3 +1,4 @@
+// Erro de dados invalido
 class DadosNaoFornecidos extends Error {
     constructor () {
         super('Não foram fornecidos dados para atualizar!')
