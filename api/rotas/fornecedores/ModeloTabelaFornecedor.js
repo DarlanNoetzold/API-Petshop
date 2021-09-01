@@ -26,4 +26,5 @@ const opcoes = {
     version: 'versao'
 }
 
+//cria a tabela fornecedor conforme a coluna e as opções através da conexão "instancia"
 module.exports = instancia.define('fornecedor', colunas, opcoes)
