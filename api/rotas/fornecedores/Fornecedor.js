@@ -4,6 +4,7 @@ const DadosNaoFornecidos = require('../../erros/DadosNaoFornecidos')
 
 //Classe do fornecedor que é alimentada
 class Fornecedor {
+    //Construtor recebe o body da requisição
     constructor ({ id, empresa, email, categoria, dataCriacao, dataAtualizacao, versao }) {
         this.id = id
         this.empresa = empresa

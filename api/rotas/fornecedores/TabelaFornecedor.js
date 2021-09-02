@@ -15,7 +15,7 @@ module.exports = {
                 id: id
             }
         })
-
+        //Erro
         if (!encontrado) {
             throw new NaoEncontrado()
         }
