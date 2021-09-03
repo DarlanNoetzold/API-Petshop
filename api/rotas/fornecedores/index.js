@@ -5,6 +5,7 @@ const SerializadorFornecedor = require('../../Serializador').SerializadorFornece
 
 //Caminhos da API
 
+//Pega todos fornecedores
 roteador.get('/', async (requisicao, resposta) => {
     const resultados = await TabelaFornecedor.listar()
     resposta.status(200)
@@ -16,6 +17,7 @@ roteador.get('/', async (requisicao, resposta) => {
     )
 })
 
+//Cria umm novo fornecedor
 roteador.post('/', async (requisicao, resposta, proximo) => {
     try {
         const dadosRecebidos = requisicao.body
@@ -33,6 +35,7 @@ roteador.post('/', async (requisicao, resposta, proximo) => {
     }
 })
 
+// devolve um fornecedor
 roteador.get('/:idFornecedor', async (requisicao, resposta, proximo) => {
     try {
         const id = requisicao.params.idFornecedor
@@ -51,6 +54,7 @@ roteador.get('/:idFornecedor', async (requisicao, resposta, proximo) => {
     }
 })
 
+//Atualiza um fornecedor
 roteador.put('/:idFornecedor', async (requisicao, resposta, proximo) => {
     try {
         const id = requisicao.params.idFornecedor
@@ -65,6 +69,7 @@ roteador.put('/:idFornecedor', async (requisicao, resposta, proximo) => {
     }
 })
 
+//deleta um fornecedor
 roteador.delete('/:idFornecedor', async (requisicao, resposta, proximo) => {
     try {
         const id = requisicao.params.idFornecedor
