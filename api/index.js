@@ -49,7 +49,7 @@ app.use((erro, requisicao, resposta, proximo) => {
     if (erro instanceof ValorNaoSuportado) {
         status = 406
     }
-
+    //Content-type
     const serializador = new SerializadorErro(
         resposta.getHeader('Content-Type')
     )
