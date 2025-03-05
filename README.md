@@ -1,12 +1,12 @@
-# API-Petshop
-## A API
-* API REST de controle de um Petshop. Usando Node.js, MySQL e as tecnologias destes meios.
-* Curso de Node.js da Alura
+#API-Petshop
+## An API
+* REST API for controlling a Petshop. Using Node.js, MySQL and these media technologies.
+* Alura's Node.js Course
 
-## Ferramentas
+##Tools
 * Node.js
-* Javascript
+*Javascript
  
 ---
 
-⭐️ From [DarlanNoetzold](https://github.com/DarlanNoetzold)
+⭐️ By [DarlanNoetzold](https://github.com/DarlanNoetzold)
